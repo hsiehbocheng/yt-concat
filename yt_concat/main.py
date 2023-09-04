@@ -7,8 +7,6 @@ from yt_concat.pipeline.steps.preflight import Preflight
 from yt_concat.pipeline.steps.postflight import Postflight
 from yt_concat.utils import Utils
 from yt_concat.settings import DOWNLOADS_DIR, CAPTIONS_DIR, VIDEOS_DIR
-
-
 CHENNEL_ID = 'UCcabW7890RKJzL968QWEykA'
 
 def main():
