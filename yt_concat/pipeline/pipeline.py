@@ -8,11 +8,11 @@ class Pipeline:
     def __init__(self, steps):
         self.steps = steps
     
-    def run(self, inputs):
+    def run(self, inputs, utils):
         for step in self.steps:
             try:
-                step.process(inputs)
+                step.process(inputs=None, data=None, utils=None)
             except StepException as e:
-                print('Exception happened: {e}')
+                print(f'Exception happened: {e}')
                 break
     
