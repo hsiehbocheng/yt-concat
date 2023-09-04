@@ -2,9 +2,9 @@ import sys
 sys.path.append('./') # Add the root directory to the Python path so that we can import the yt_concat package
 
 
-from yt_concat.pipeline.steps.get_videos_from_channel import GetVieosList
+from yt_concat.pipeline.steps.get_videos_from_channel import GetVideoList
 from yt_concat.pipeline.steps.step import StepException
-from yt_concat.pipeline import Pipeline
+from yt_concat.pipeline.pipeline import Pipeline
 
 CHENNEL_ID = 'UCcabW7890RKJzL968QWEykA'
 
@@ -14,7 +14,7 @@ def main():
     }
 
     steps = [
-        GetVieosList(),
+        GetVideoList(),
     ]
 
     p = Pipeline(steps)
