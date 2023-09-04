@@ -1,8 +1,8 @@
+from yt_concat.settings import CAPTIONS_DIR
+from .step import Step, StepException
 import os
 import sys
 sys.path.append('./')
-from .step import Step, StepException
-from yt_concat.settings import CAPTIONS_DIR
 
 
 class DownloadCaptions(Step):
