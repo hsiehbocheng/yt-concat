@@ -1,7 +1,4 @@
 import os
-import sys
-sys.path.append('./')
-
 from yt_concat.settings import DOWNLOADS_DIR, CAPTIONS_DIR, VIDEOS_DIR
 
 class Utils:

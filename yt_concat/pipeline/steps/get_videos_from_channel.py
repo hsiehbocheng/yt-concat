@@ -1,8 +1,5 @@
-import sys
-sys.path.append('./') # Add the root directory to the Python path so that we can import the yt_concat package
 import json
 import urllib.request
-
 from yt_concat.settings import VIDEOS_DIR
 from yt_concat.pipeline.steps.step import Step, StepException
 from yt_concat.settings import YOUTUBE_API_KEY

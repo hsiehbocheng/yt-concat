@@ -1,4 +1,4 @@
-import  os
+import os
 from yt_concat.pipeline.steps.get_videos_from_channel import GetVideoList
 from yt_concat.pipeline.steps.download_captions import DownloadCaptions
 from yt_concat.pipeline.steps.step import StepException

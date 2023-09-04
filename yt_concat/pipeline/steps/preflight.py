@@ -1,6 +1,3 @@
-import sys
-sys.path.append('./')
-
 from yt_concat.pipeline.steps.step import Step
 from yt_concat.utils import Utils
 from yt_concat.settings import DOWNLOADS_DIR, CAPTIONS_DIR, VIDEOS_DIR
