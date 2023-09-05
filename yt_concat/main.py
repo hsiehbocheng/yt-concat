@@ -29,7 +29,6 @@ def main():
     utils = Utils()
     p = Pipeline(steps)
     p.run(inputs=inputs, utils=utils)
-    pass
 
 if __name__ == '__main__':
     main()
