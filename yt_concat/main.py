@@ -7,16 +7,17 @@ from yt_concat.pipeline.steps.preflight import Preflight
 from yt_concat.pipeline.steps.postflight import Postflight
 from yt_concat.utils import Utils
 from yt_concat.settings import DOWNLOADS_DIR, CAPTIONS_DIR, VIDEOS_DIR
-CHENNEL_ID = 'UCcabW7890RKJzL968QWEykA'
 
+CHENNEL_ID = 'UCcabW7890RKJzL968QWEykA'
 def main():
     inputs = {
-        'channel_id': CHENNEL_ID
+        'channel_id': CHENNEL_ID,
+        'get_video_list': False,
     }
 
     steps = [
         Preflight(),
-        # GetVideoList(),
+        GetVideoList(),
         # DownloadCaptions(),
         Postflight(),
     ]
@@ -28,4 +29,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    print(os.listdir())
