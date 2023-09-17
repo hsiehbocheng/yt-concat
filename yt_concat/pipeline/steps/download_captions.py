@@ -1,5 +1,6 @@
 from yt_concat.settings import CAPTIONS_DIR
 from .step import Step, StepException
+from yt_concat.utils import Utils
 import yt_dlp
 
 class DownloadCaptions(Step):
@@ -12,7 +13,8 @@ class DownloadCaptions(Step):
                 "skip_download": True,
                 "subtitleslangs": ["en"],
                 "convertsubs": "srt",
-                "outtmpl": f"{CAPTIONS_DIR}/{CHANNEL_ID}/%(title)s.%(ext)s",
+                "outtmpl": f"{CAPTIONS_DIR}/%(id)s.%(ext)s",
+                # "outtmpl": f"{CAPTIONS_DIR}/{utils.get_caption_filepath(url)}",
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
