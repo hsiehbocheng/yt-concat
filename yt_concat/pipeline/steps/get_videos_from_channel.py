@@ -9,6 +9,7 @@ class GetVideoList(Step):
         def process(self, inputs, data=None, utils=None):
             CHANNEL_ID = inputs['channel_id']
             if inputs['get_video_list']:
+                print(f'Downloading videos url list from channel {CHANNEL_ID} ...')
                 base_video_url = 'https://www.youtube.com/watch?v='
                 base_search_url = 'https://www.googleapis.com/youtube/v3/search?'
 

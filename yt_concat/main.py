@@ -8,21 +8,21 @@ from yt_concat.pipeline.steps.postflight import Postflight
 from yt_concat.utils import Utils
 from yt_concat.settings import DOWNLOADS_DIR, CAPTIONS_DIR, VIDEOS_DIR
 
-CHENNEL_ID = 'UCcabW7890RKJzL968QWEykA'
+CHANNEL_ID = 'UCcabW7890RKJzL968QWEykA'
 GET_VIDEO_LIST_OR_NOT = not os.path.exists(
-    os.path.join(VIDEOS_DIR, CHENNEL_ID + '.txt')
+    os.path.join(VIDEOS_DIR, CHANNEL_ID + '.txt')
 ) # 如果存在該 Channel 的 Video List 就不重新抓, 防止達到 API 上限
 
 def main():
     inputs = {
-        'channel_id': CHENNEL_ID,
+        'channel_id': CHANNEL_ID,
         'get_video_list': GET_VIDEO_LIST_OR_NOT,
     }
 
     steps = [
         Preflight(),
         GetVideoList(),
-        # DownloadCaptions(),
+        DownloadCaptions(),
         Postflight(),
     ]
 
@@ -32,4 +32,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    print(GET_VIDEO_LIST_OR_NOT)
